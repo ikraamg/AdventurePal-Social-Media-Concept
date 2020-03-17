@@ -1,0 +1,161 @@
+html {
+  font-size: 62.5%;
+  color: #414464;
+  font-family: "Open Sans", sans-serif;
+}
+
+html body {
+  font-size: 1.6rem;
+  display: -ms-grid;
+  display: grid;
+  min-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(211, 211, 211, 0.431);
+  font-family: "Open Sans", sans-serif;
+      grid-template-areas: 'head' 'main' 'foot';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+html body header {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+}
+
+html body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8%;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+html body main {
+  width: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+html body main * {
+  border-radius: 10px;
+}
+
+html body main .messages {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 100px;
+      grid-template-columns: 100px 1fr 100px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  margin-bottom: 20px;
+}
+
+html body main .messages img {
+  width: 65px;
+  height: 65px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+html body main .messages .content {
+  padding-left: 10px;
+}
+
+html body main .messages .content h5 {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-top: 10px;
+}
+
+html body main .messages .content p {
+  font-size: 1.3rem;
+  color: #414464c9;
+}
+
+html body main .messages .time {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.3rem;
+}
+
+html body .far,
+html body .fas {
+  font-size: 2.5rem;
+}
+
+html body .far:hover,
+html body .fas:hover {
+  color: #f0916e;
+}
+
+html body footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  -webkit-box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+          box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+  z-index: 1;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: foot;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10%;
+}
+
+html body footer .fa-globe {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.897);
+}
+
+html body footer .foot-icon3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4e50b8;
+  width: 70px;
+  height: 70px;
+  margin-top: -40px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=chats.css.map */

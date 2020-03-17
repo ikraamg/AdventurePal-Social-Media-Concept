@@ -1,0 +1,152 @@
+$font: 'Open Sans', sans-serif;
+$color1: lightpink;
+$color2: lightblue;
+$color3: lightgreen;
+$color4: lightblue;
+$color5: lightgrey;
+$my-purple: #4e50b8;
+$my-orange: #f0916e;
+$my-grey: #414464;
+$back-grey: rgba(211, 211, 211, 0.431);
+
+html {
+  font-size: 62.5%; //Remember to use REM: 1REM is 10px
+  color: $my-grey;
+  font-family: $font;
+
+  body {
+    font-size: 1.6rem;
+    display: grid;
+    // max-width: 1350px;
+    min-width: 400px;
+    margin: 0 auto;
+    background-color: $back-grey;
+    font-family: $font;
+    grid-template-areas:
+      'head'
+      'main'
+      'foot';
+    grid-template-columns: 1fr;
+    // grid-template-rows: repeat(3, minmax(50px, 1fr));
+    grid-gap: 10px;
+
+    // @media (min-width: 1024px) {
+    //   grid-template-areas:
+    //     'head head head head head'
+    //     'main main main main main'
+    //     'foot foot foot foot foot';
+    //   grid-template-columns: repeat(5, 1fr);
+    //   grid-template-rows: repeat(3, minmax(250px, 1fr));
+    // }
+
+    // * {
+    //   border: 2px dotted rgb(0, 0, 0);
+    // }
+
+    header {
+      background-color: white;
+      position: sticky;
+      top: 0;
+      grid-area: head;
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8%;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
+
+    main {
+      width: 90%;
+      justify-self: center;
+      grid-area: main;
+
+      * {
+        border-radius: 10px;
+      }
+
+      .messages {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 1fr;
+        margin-bottom: 20px;
+
+        img {
+          width: 65px;
+          height: 65px;
+          object-fit: cover;
+          justify-self: center;
+          align-self: center;
+        }
+
+        .content {
+          padding-left: 10px;
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: center;
+
+          h5 {
+            font-size: 1.8rem;
+            margin: 0;
+            margin-top: 10px;
+          }
+
+          p {
+            font-size: 1.3rem;
+            color: #414464c9;
+          }
+        }
+
+        .time {
+          text-align: center;
+          align-self: center;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .far,
+    .fas {
+      font-size: 2.5rem;
+
+      &:hover {
+        color: $my-orange;
+      }
+    }
+
+    footer {
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      background-color: white;
+      box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+      z-index: 1;
+      grid-area: foot;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+
+      .fa-globe {
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.897);
+      }
+
+      .foot-icon3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $my-purple;
+        width: 70px;
+        height: 70px;
+        margin-top: -40px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
