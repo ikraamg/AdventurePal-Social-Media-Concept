@@ -9,13 +9,15 @@ $my-orange: #f0916e;
 $my-grey: #414464;
 $back-grey: rgba(211, 211, 211, 0.431);
 $text-grey: #414464c9;
+$chat-grey: rgba(211, 211, 211, 0.589);
+$chat-purple: #4e50b82f;
 
 html {
   font-size: 62.5%; //Remember to use REM: 1REM is 10px
   color: $my-grey;
   font-family: $font;
+  scroll-behavior: smooth;
 
-  /* width */
   ::-webkit-scrollbar {
     width: 1rem;
   }
@@ -49,11 +51,23 @@ html {
     grid-template-columns: 1fr;
     grid-gap: 10px;
 
-    // @media (min-width: 1024px) {
-    //   grid-template-areas:
-    //   grid-template-columns: repeat(5, 1fr);
-    //   grid-template-rows: repeat(3, minmax(250px, 1fr));
-    // }
+    .lg {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      // grid-template-areas:;
+      // grid-template-columns: repeat(5, 1fr);
+      // grid-template-rows: repeat(3, minmax(250px, 1fr));
+
+      .sm {
+        display: none;
+      }
+
+      .lg {
+        display: block;
+      }
+    }
 
     // * {
     //   border: 2px dotted rgb(0, 0, 0);
@@ -72,56 +86,76 @@ html {
         padding: 0 8%;
         font-weight: bold;
         font-size: 1.2em;
+
+        .online {
+          color: #41446483;
+          font-size: 0.6em;
+          text-align: center;
+          margin-top: -20px;
+        }
+
+        @media (min-width: 1024px) {
+          .far,
+          .fas {
+            color: #41446483;
+          }
+        }
+      }
+
+      .greendot {
+        color: rgb(23, 221, 23);
       }
     }
 
     main {
-      height: 150vh; //remove this later
       width: 90%;
       justify-self: center;
       grid-area: main;
 
-      * {
-        border-radius: 10px;
-      }
-
       .messages {
-        background-color: white;
         display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 1fr;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr 50px;
         margin-bottom: 20px;
+        justify-items: right;
+        align-self: start;
 
-        img {
-          width: 65px;
-          height: 65px;
-          object-fit: cover;
-          justify-self: center;
-          align-self: center;
+        .spacer {
+          grid-column: 1/2;
         }
 
         .content {
-          padding-left: 10px;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: center;
-
-          h5 {
-            font-size: 1.8rem;
-            margin: 0;
-            margin-top: 10px;
-          }
-
-          p {
-            font-size: 1.3rem;
-            color: #414464c9;
-          }
+          background-color: $chat-purple;
+          padding: 10px;
+          margin: 0 30px;
+          align-self: baseline;
         }
 
         .time {
-          text-align: center;
           align-self: center;
+          margin: 0 30px;
           font-size: 1.3rem;
+          grid-column: 2/3;
+        }
+      }
+
+      .left {
+        grid-template-columns: 1fr 100px;
+        justify-items: left;
+
+        .spacer {
+          grid-column: 2/3;
+        }
+
+        .content {
+          background-color: $chat-grey;
+          grid-row: 1/2;
+          grid-column: 1/2;
+        }
+
+        .time {
+          grid-column: 1/2;
+          grid-row: 2/3;
         }
       }
     }
@@ -158,7 +192,7 @@ html {
       }
 
       .foot-icon2 {
-        width: 100%;
+        width: 95%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -166,12 +200,11 @@ html {
         form {
           width: 100%;
           display: flex;
-          justify-content: center;
           align-items: center;
         }
 
         input {
-          width: 95%;
+          width: 100%;
           height: 35px;
           border-radius: 10px;
           font-size: 1.55rem;
