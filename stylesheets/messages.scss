@@ -13,7 +13,7 @@ $chat-grey: rgba(211, 211, 211, 0.589);
 $chat-purple: #4e50b82f;
 
 html {
-  font-size: 62.5%; //Remember to use REM: 1REM is 10px
+  font-size: 62.5%;
   color: $my-grey;
   font-family: $font;
   scroll-behavior: smooth;
@@ -82,30 +82,48 @@ html {
       grid-area: head;
 
       nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 8%;
-        font-weight: bold;
-        font-size: 1.2em;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
 
-        .online {
-          color: #41446483;
-          font-size: 0.6em;
-          text-align: center;
-          margin-top: -20px;
+        .chatnav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 8%;
+          font-weight: bold;
+          font-size: 1.2em;
         }
 
-        @media (min-width: 1024px) {
-          .far,
-          .fas {
+        .messagenav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 8%;
+          font-weight: bold;
+          font-size: 1.2em;
+
+          .online {
             color: #41446483;
+            font-size: 0.6em;
+            text-align: center;
+            margin-top: -20px;
+          }
+
+          @media (min-width: 1024px) {
+            .far,
+            .fas {
+              color: #41446483;
+
+              &:hover {
+                color: $my-orange;
+              }
+            }
           }
         }
-      }
 
-      .greendot {
-        color: rgb(23, 221, 23);
+        .greendot {
+          color: rgb(23, 221, 23);
+        }
       }
     }
 
