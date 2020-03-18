@@ -103,6 +103,15 @@ html body main {
   grid-area: main;
 }
 
+@media (min-width: 1024px) {
+  html body main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
 html body main .messages {
   display: -ms-grid;
   display: grid;
@@ -128,6 +137,7 @@ html body main .messages .content {
   margin: 0 30px;
   -ms-flex-item-align: baseline;
       align-self: baseline;
+  border-radius: 10px;
 }
 
 html body main .messages .time {
