@@ -5,6 +5,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1024px) {
+  html {
+    overflow-y: hidden;
+  }
+}
+
 html ::-webkit-scrollbar {
   width: 1rem;
 }
@@ -22,6 +28,13 @@ html ::-webkit-scrollbar-thumb {
 
 html ::-webkit-scrollbar-thumb:hover {
   background: #f0916e;
+}
+
+@media (min-width: 1024px) {
+  html .scroll {
+    height: 83vh;
+    overflow-y: auto;
+  }
 }
 
 html body {
@@ -51,6 +64,10 @@ html body .lg {
   }
 }
 
+html body .orange-hover:hover {
+  color: #f0916e;
+}
+
 html body header {
   background-color: white;
   position: -webkit-sticky;
@@ -61,26 +78,27 @@ html body header {
   grid-area: head;
 }
 
-html body header nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-}
-
-html body header nav .chatnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 8%;
-  font-weight: bold;
-  font-size: 1.2em;
+@media (min-width: 1024px) {
+  html body header nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  html body header nav .chatnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 8%;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 }
 
 html body header nav .messagenav {
@@ -103,6 +121,10 @@ html body header nav .messagenav .online {
   font-size: 0.6em;
   text-align: center;
   margin-top: -20px;
+}
+
+html body header nav .messagenav .online:hover {
+  color: #f0916e;
 }
 
 @media (min-width: 1024px) {
