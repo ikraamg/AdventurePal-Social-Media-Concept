@@ -224,12 +224,15 @@ html body footer {
   width: 100%;
   height: 70px;
   background-color: white;
-  -webkit-box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
-          box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
-  z-index: 1;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: foot;
+}
+
+html body footer .chats-foot {
+  -webkit-box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+          box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,21 +243,22 @@ html body footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 10%;
+  height: 100%;
 }
 
 @media (min-width: 1024px) {
-  html body footer {
+  html body footer .chats-foot {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
-html body footer .fa-globe {
+html body footer .chats-foot .fa-globe {
   font-size: 4rem;
   color: rgba(255, 255, 255, 0.897);
 }
 
-html body footer .foot-icon3 {
+html body footer .chats-foot .foot-icon3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,7 +276,7 @@ html body footer .foot-icon3 {
 }
 
 @media (min-width: 1024px) {
-  html body footer .foot-icon3 {
+  html body footer .chats-foot .foot-icon3 {
     display: none;
   }
 }
