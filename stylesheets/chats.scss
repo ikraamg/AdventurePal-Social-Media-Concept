@@ -48,14 +48,23 @@ html {
     // grid-template-rows: repeat(3, minmax(50px, 1fr));
     grid-gap: 10px;
 
-    // @media (min-width: 1024px) {
-    //   grid-template-areas:
-    //     'head head head head head'
-    //     'main main main main main'
-    //     'foot foot foot foot foot';
-    //   grid-template-columns: repeat(5, 1fr);
-    //   grid-template-rows: repeat(3, minmax(250px, 1fr));
-    // }
+    .greendot {
+      color: rgb(23, 221, 23);
+    }
+
+    .lg {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .sm {
+        display: none;
+      }
+
+      .lg {
+        display: block;
+      }
+    }
 
     // * {
     //   border: 2px dotted rgb(0, 0, 0);
@@ -67,62 +76,116 @@ html {
       top: 0;
       grid-area: head;
 
-      nav {
+      .chatnav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 8%;
         font-weight: bold;
         font-size: 1.2em;
+        min-height: 70px;
+
+        form {
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        input {
+          width: 100%;
+          height: 35px;
+          font-size: 1.5rem;
+          margin-left: -28px;
+          padding-left: 40px;
+          border: 0;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        .fa-search {
+          z-index: 1;
+        }
+
+        .edit {
+          @media (min-width: 1024px) {
+            background-color: $my-purple;
+            color: white;
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fa-edit {
+              margin-left: 3px;
+              margin-bottom: 2px;
+            }
+          }
+        }
       }
     }
 
     main {
-      width: 90%;
-      justify-self: center;
       grid-area: main;
+      justify-self: center;
+      width: 90%; //check this when you move it over.
 
-      * {
-        border-radius: 10px;
-      }
+      .chats-main {
+        width: 100%;
 
-      .messages {
-        background-color: white;
-        display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 1fr;
-        margin-bottom: 20px;
-
-        img {
-          width: 65px;
-          height: 65px;
-          object-fit: cover;
-          justify-self: center;
-          align-self: center;
+        @media (min-width: 1024px) {
+          background-color: white;
+          width: 100%;
+          padding: 0 10px;
         }
 
-        .content {
-          padding-left: 10px;
-          // display: flex;
-          // flex-direction: column;
-          // justify-content: center;
-
-          h5 {
-            font-size: 1.8rem;
-            margin: 0;
-            margin-top: 10px;
-          }
-
-          p {
-            font-size: 1.3rem;
-            color: #414464c9;
-          }
+        * {
+          border-radius: 10px;
         }
 
-        .time {
-          text-align: center;
-          align-self: center;
-          font-size: 1.3rem;
+        .messages {
+          background-color: white;
+          display: grid;
+          grid-template-columns: 100px 1fr 100px;
+          grid-template-rows: 1fr;
+          margin-bottom: 20px;
+
+          @media (min-width: 1024px) {
+            margin-bottom: 0;
+          }
+
+          img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            justify-self: center;
+            align-self: center;
+          }
+
+          .content {
+            padding-left: 10px;
+
+            h5 {
+              font-size: 1.8rem;
+              margin: 0;
+              margin-top: 10px;
+            }
+
+            p {
+              font-size: 1.3rem;
+              color: #414464c9;
+            }
+          }
+
+          .time {
+            text-align: center;
+            font-size: 1.1rem;
+            align-self: flex-start;
+            padding-top: 4px;
+          }
         }
       }
     }
@@ -150,6 +213,10 @@ html {
       align-items: center;
       padding: 0 10%;
 
+      @media (min-width: 1024px) {
+        box-shadow: none;
+      }
+
       .fa-globe {
         font-size: 4rem;
         color: rgba(255, 255, 255, 0.897);
@@ -164,6 +231,10 @@ html {
         height: 70px;
         margin-top: -40px;
         border-radius: 10px;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
       }
     }
   }
