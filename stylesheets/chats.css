@@ -1,7 +1,7 @@
 html {
   font-size: 62.5%;
   color: #414464;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ html ::-webkit-scrollbar {
 html ::-webkit-scrollbar-track {
   background: rgba(211, 211, 211, 0.431);
   -webkit-box-shadow: inset 0 0 4px;
-          box-shadow: inset 0 0 4px;
+  box-shadow: inset 0 0 4px;
 }
 
 html ::-webkit-scrollbar-thumb {
@@ -49,10 +49,10 @@ html body {
   min-width: 400px;
   margin: 0 auto;
   background-color: rgba(211, 211, 211, 0.431);
-  font-family: "Open Sans", sans-serif;
-      grid-template-areas: 'head' 'main' 'foot';
+  font-family: 'Open Sans', sans-serif;
+  grid-template-areas: 'head' 'main' 'foot';
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
@@ -68,6 +68,7 @@ html body .lg {
   html body .sm {
     display: none;
   }
+
   html body .lg {
     display: block;
   }
@@ -78,25 +79,25 @@ html body .flex {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
 html body .flex-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 html body .far,
@@ -126,11 +127,11 @@ html body header {
 html body header .homenav {
   display: none;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 5%;
 }
 
@@ -150,8 +151,8 @@ html body header .homenav .heading {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body header .homenav .nav-left,
@@ -160,8 +161,8 @@ html body header .homenav .nav-right {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body header .homenav .nav-left i,
@@ -183,6 +184,7 @@ html body header .homenav .orange-text {
   html body header .homenav .light {
     color: #41446483;
   }
+
   html body header .homenav .far:hover,
   html body header .homenav .fas:hover,
   html body header .homenav .light:hover {
@@ -195,11 +197,11 @@ html body header .chatnav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 8%;
   font-weight: bold;
   font-size: 1.2em;
@@ -218,8 +220,8 @@ html body header .chatnav form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body header .chatnav input {
@@ -250,12 +252,13 @@ html body header .chatnav .fa-search {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
+
   html body header .chatnav .edit .fa-edit {
     margin-left: 3px;
     margin-bottom: 2px;
@@ -267,7 +270,7 @@ html body main {
   -ms-grid-column: 1;
   grid-area: main;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   width: 90%;
 }
 
@@ -276,14 +279,14 @@ html body main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
 html body main .upgrade {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   width: 90%;
   background-color: #4e50b8;
   color: white;
@@ -295,8 +298,8 @@ html body main .menu-main {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 0 10px;
   font-size: 1.3rem;
   height: calc(100vh);
@@ -342,7 +345,7 @@ html body main .menu-main .user .user-pic {
   width: 60px;
   height: 60px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 html body main .menu-main .user .fa-cog {
@@ -364,8 +367,8 @@ html body main .menu-main .list li {
 
 html body main .menu-main .list li .flex {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 html body main .menu-main .list .orange-no {
@@ -411,9 +414,9 @@ html body main .chats-main .messages {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 1fr 100px;
-      grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 100px;
   -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
   margin-bottom: 20px;
 }
 
@@ -427,12 +430,12 @@ html body main .chats-main .messages img {
   width: 65px;
   height: 65px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 html body main .chats-main .messages .content {
@@ -455,7 +458,7 @@ html body main .chats-main .messages .time {
   text-align: center;
   font-size: 1.1rem;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   padding-top: 4px;
 }
 
@@ -480,17 +483,17 @@ html body footer {
 
 html body footer .chats-foot {
   -webkit-box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
-          box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
+  box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 10%;
   height: 100%;
 }
@@ -498,7 +501,7 @@ html body footer .chats-foot {
 @media (min-width: 1024px) {
   html body footer .chats-foot {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
 
@@ -512,11 +515,11 @@ html body footer .chats-foot .foot-icon3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #4e50b8;
   width: 70px;
   height: 70px;
@@ -529,4 +532,3 @@ html body footer .chats-foot .foot-icon3 {
     display: none;
   }
 }
-/*# sourceMappingURL=chats.css.map */

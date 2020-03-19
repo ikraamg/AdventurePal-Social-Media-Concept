@@ -1,7 +1,7 @@
 html {
   font-size: 62.5%;
   color: #414464;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ html ::-webkit-scrollbar {
 html ::-webkit-scrollbar-track {
   background: rgba(211, 211, 211, 0.431);
   -webkit-box-shadow: inset 0 0 4px;
-          box-shadow: inset 0 0 4px;
+  box-shadow: inset 0 0 4px;
 }
 
 html ::-webkit-scrollbar-thumb {
@@ -44,10 +44,10 @@ html body {
   min-width: 400px;
   margin: 0 auto;
   background-color: rgba(211, 211, 211, 0.431);
-  font-family: "Open Sans", sans-serif;
-      grid-template-areas: 'head' 'main' 'foot';
+  font-family: 'Open Sans', sans-serif;
+  grid-template-areas: 'head' 'main' 'foot';
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
@@ -59,6 +59,7 @@ html body .lg {
   html body .sm {
     display: none;
   }
+
   html body .lg {
     display: block;
   }
@@ -87,32 +88,35 @@ html body header {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1.1fr 2fr;
-        grid-template-columns: 1.1fr 2fr;
+    grid-template-columns: 1.1fr 2fr;
   }
+
   html body header nav .chatnav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 0 8%;
     font-weight: bold;
     font-size: 1.2em;
     min-height: 70px;
   }
+
   html body header nav .chatnav form {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
+
   html body header nav .chatnav input {
     width: 100%;
     height: 35px;
@@ -121,9 +125,11 @@ html body header {
     padding-left: 40px;
     border: 0;
   }
+
   html body header nav .chatnav input:focus {
     outline: 0;
   }
+
   html body header nav .chatnav .fa-search {
     z-index: 1;
   }
@@ -140,12 +146,13 @@ html body header {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
+
   html body header nav .chatnav .edit .fa-edit {
     margin-left: 3px;
     margin-bottom: 2px;
@@ -157,11 +164,11 @@ html body header nav .messagenav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 8%;
   font-weight: bold;
   font-size: 1.2em;
@@ -183,6 +190,7 @@ html body header nav .messagenav .online:hover {
   html body header nav .messagenav .fas {
     color: #41446483;
   }
+
   html body header nav .messagenav .far:hover,
   html body header nav .messagenav .fas:hover {
     color: #f0916e;
@@ -192,7 +200,7 @@ html body header nav .messagenav .online:hover {
 html body main {
   width: 90%;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
@@ -203,7 +211,7 @@ html body main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1.1fr 2fr;
-        grid-template-columns: 1.1fr 2fr;
+    grid-template-columns: 1.1fr 2fr;
     width: 100%;
   }
 }
@@ -229,9 +237,9 @@ html body main .chats-main .messages {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 1fr 100px;
-      grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 100px;
   -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
   margin-bottom: 20px;
 }
 
@@ -245,12 +253,12 @@ html body main .chats-main .messages img {
   width: 65px;
   height: 65px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 html body main .chats-main .messages .content {
@@ -272,7 +280,7 @@ html body main .chats-main .messages .time {
   text-align: center;
   font-size: 1.1rem;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   padding-top: 4px;
 }
 
@@ -280,13 +288,13 @@ html body main .message-main .messages {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 1fr;
-      grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px 1fr;
   -ms-grid-rows: 1fr 50px;
-      grid-template-rows: 1fr 50px;
+  grid-template-rows: 1fr 50px;
   margin-bottom: 20px;
   justify-items: right;
   -ms-grid-row-align: start;
-      align-self: start;
+  align-self: start;
 }
 
 html body main .message-main .messages .spacer {
@@ -300,14 +308,14 @@ html body main .message-main .messages .content {
   padding: 10px;
   margin: 0 30px;
   -ms-flex-item-align: baseline;
-      align-self: baseline;
+  align-self: baseline;
   border-radius: 10px;
 }
 
 html body main .message-main .messages .time {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   margin: 0 30px;
   font-size: 1.3rem;
   -ms-grid-column: 2;
@@ -317,7 +325,7 @@ html body main .message-main .messages .time {
 
 html body main .message-main .left {
   -ms-grid-columns: 1fr 100px;
-      grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr 100px;
   justify-items: left;
 }
 
@@ -373,18 +381,18 @@ html body footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1.1fr 2fr;
-        grid-template-columns: 1.1fr 2fr;
+    grid-template-columns: 1.1fr 2fr;
   }
 }
 
 html body footer .chats-foot {
   display: none;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 10%;
   height: 100%;
 }
@@ -392,7 +400,7 @@ html body footer .chats-foot {
 @media (min-width: 1024px) {
   html body footer .chats-foot {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -409,11 +417,11 @@ html body footer .chats-foot .foot-icon3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #4e50b8;
   width: 70px;
   height: 70px;
@@ -431,12 +439,12 @@ html body footer .message-foot {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 1fr 100px;
-      grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 100px;
   -ms-grid-rows: 70px;
-      grid-template-rows: 70px;
+  grid-template-rows: 70px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   justify-items: center;
   padding: 0 5%;
   color: #41446483;
@@ -448,11 +456,11 @@ html body footer .message-foot .foot-icon1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body footer .message-foot .foot-icon2 {
@@ -461,11 +469,11 @@ html body footer .message-foot .foot-icon2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body footer .message-foot .foot-icon2 form {
@@ -474,8 +482,8 @@ html body footer .message-foot .foot-icon2 form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html body footer .message-foot .foot-icon2 input {
@@ -502,14 +510,13 @@ html body footer .message-foot .foot-icon3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #4e50b8;
   width: 40px;
   height: 40px;
   border-radius: 10px;
 }
-/*# sourceMappingURL=messages.css.map */
