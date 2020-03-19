@@ -84,16 +84,16 @@ html body .flex-column {
   }
 }
 
-html body * {
-  border: 2px dotted black;
-}
-
 html body .orange-hover:hover {
   color: #f0916e;
 }
 
 html body .greendot {
   color: #17dd17;
+}
+
+html body .pushup {
+  margin-top: -10px;
 }
 
 html body .fa,
@@ -118,6 +118,7 @@ html body header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+  z-index: 99;
 }
 
 html body header nav .homenav {
@@ -182,7 +183,7 @@ html body header nav .homenav .orange-text {
 }
 
 html body main {
-  width: 90%;
+  width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-grid-row: 2;
@@ -212,15 +213,21 @@ html body main .upgrade {
 }
 
 html body main .menu-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 10px;
   font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  html body main .menu-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 html body main .menu-main p {
@@ -243,6 +250,21 @@ html body main .menu-main .user {
   margin: 10px 0;
 }
 
+html body main .menu-main .user .get {
+  width: 70%;
+}
+
+html body main .menu-main .user .fa-heart {
+  color: #f0916e;
+}
+
+html body main .menu-main .user .user-pic {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 html body main .menu-main .user .fa-cog {
   color: #41446483;
 }
@@ -253,11 +275,11 @@ html body main .menu-main .user .purple-text {
 }
 
 html body main .menu-main .list {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 html body main .menu-main .list li {
-  margin: 8px 0;
+  margin: 5px 0;
 }
 
 html body main .menu-main .list li .flex {
@@ -288,9 +310,22 @@ html body main .menu-main .list .far {
   padding-right: 10px;
 }
 
+html body main .profile-main .icons {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  html body main .profile-main .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 html body main .profile-main .icon {
   width: 60px;
-  height: 55px;
+  width: 4vw;
+  height: 4vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
@@ -324,18 +359,168 @@ html body main .profile-main .circle .x {
   margin-top: 12.5px;
 }
 
-html body main .profile-main .swipe-icons {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: -20px;
-  z-index: 999;
+html body main .profile-main .main-image {
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 190px);
+  background-image: url(/images/canoe-gril.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-html body main .profile-main .details-main {
+html body main .profile-main .dots {
+  position: absolute;
+  top: 12px;
+  right: 40px;
+}
+
+html body main .profile-main .dots .dot {
+  background-color: rgba(155, 155, 155, 0.623);
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+html body main .profile-main .dots .dot:nth-child(3) {
+  background-color: #f0916e;
+}
+
+html body main .profile-main .location-topleft {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+html body main .profile-main .swipe-icons {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 40px;
+  color: white;
+}
+
+html body main .profile-main .swipe-icons .fas {
+  font-size: 5rem;
+}
+
+html body main .profile-main .swipe-icons .heart {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background-color: #4e50b8;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+html body main .profile-main .swipe-icons .skip {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background-color: #f0916e;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+  margin-left: 10px;
+}
+
+html body main .profile-main .swipe-icons .skip:hover .fa-times {
+  color: #4e50b8;
+}
+
+html body main .profile-main .swipe-icons .right {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(128, 128, 128, 0.438);
+}
+
+html body main .profile-main .swipe-icons .left {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(128, 128, 128, 0.438);
+}
+
+html body main .profile-main .person-detail-small {
+  background-color: white;
+  padding: 0 20px;
+}
+
+html body main .profile-main .person-detail-small p {
+  color: #41446483;
+  font-size: 1.3rem;
+}
+
+html body main .profile-main .person-detail-small .connect {
+  width: 80%;
+}
+
+html body main .profile-main .person-detail-small .gift-image-sm {
+  width: 90px;
+}
+
+html body main .profile-main .person-detail-small .name,
+html body main .profile-main .person-detail-small .location-sm {
+  width: 50%;
+}
+
+html body main .profile-main .person-detail-small h5 {
+  margin-top: -12px;
+}
+
+html body main .details-main {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -344,38 +529,46 @@ html body main .profile-main .details-main {
   font-size: 1.3rem;
 }
 
-html body main .profile-main .details-main p {
+@media (min-width: 1024px) {
+  html body main .details-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body main .details-main .greyit {
   color: #41446483;
 }
 
-html body main .profile-main .details-main div {
+html body main .details-main div {
   background-color: white;
   border-radius: 10px;
   padding: 0 5px;
 }
 
-html body main .profile-main .details-main div .gift-image,
-html body main .profile-main .details-main div .crown-image {
-  width: 60px;
+html body main .details-main div .gift-image,
+html body main .details-main div .crown-image {
+  width: 50px;
   border-radius: 10px;
 }
 
-html body main .profile-main .details-main .pro-ad {
+html body main .details-main .pro-ad {
   margin: 10px 0;
   padding-bottom: 15px;
   padding-top: 5px;
 }
 
-html body main .profile-main .details-main .pro-ad .ad-top {
+html body main .details-main .pro-ad .ad-top {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-html body main .profile-main .details-main .location {
+html body main .details-main .location {
   margin-left: -4px;
 }
 
-html body main .profile-main .details-main .location .compass {
+html body main .details-main .location .compass {
   background-color: #4e50b8;
   color: rgba(255, 255, 255, 0.856);
   width: 40px;
@@ -391,82 +584,31 @@ html body main .profile-main .details-main .location .compass {
           align-items: center;
 }
 
-html body main .profile-main .details-main .person-detail .name h5,
-html body main .profile-main .details-main .person-detail .location h5,
-html body main .profile-main .details-main .person-detail .interests h5,
-html body main .profile-main .details-main .person-detail .languages h5 {
-  margin-top: -10px;
+html body main .details-main .person-detail .name,
+html body main .details-main .person-detail .location,
+html body main .details-main .person-detail .interests,
+html body main .details-main .person-detail .languages {
+  height: 55px;
 }
 
-html body main .profile-main .details-main .filter {
+html body main .details-main .person-detail .name h5,
+html body main .details-main .person-detail .location h5,
+html body main .details-main .person-detail .interests h5,
+html body main .details-main .person-detail .languages h5 {
+  margin-top: -12px;
+}
+
+html body main .details-main .filter {
   margin-bottom: 10px;
   padding: 0 12px;
 }
 
-html body main .profile-main .details-main .greybut {
+html body main .details-main .greybut {
   background-color: rgba(211, 211, 211, 0.431);
   color: #414464;
 }
 
-html body main .profile-main .details-main .gift {
+html body main .details-main .gift {
   padding: 5px 5px;
-}
-
-html body footer {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: white;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: foot;
-}
-
-@media (min-width: 1024px) {
-  html body footer {
-    display: none;
-  }
-}
-
-html body footer .home-foot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 10%;
-  height: 100%;
-}
-
-html body footer .home-foot .fa-globe {
-  font-size: 4rem;
-  color: rgba(255, 255, 255, 0.897);
-}
-
-html body footer .home-foot .fa-globe:hover {
-  color: #f0916e;
-}
-
-html body footer .home-foot .foot-icon3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #4e50b8;
-  width: 70px;
-  height: 70px;
-  margin-top: -40px;
-  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */

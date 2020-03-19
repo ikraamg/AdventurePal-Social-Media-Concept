@@ -88,9 +88,9 @@ html {
       }
     }
 
-    * {
-      border: 2px dotted rgb(0, 0, 0);
-    }
+    // * {
+    //   border: 2px dotted rgb(0, 0, 0);
+    // }
 
     .orange-hover:hover {
       color: $my-orange;
@@ -98,6 +98,10 @@ html {
 
     .greendot {
       color: rgb(23, 221, 23);
+    }
+
+    .pushup {
+      margin-top: -10px;
     }
 
     .fa,
@@ -116,6 +120,7 @@ html {
       position: sticky;
       top: 0;
       grid-area: head;
+      z-index: 99;
 
       nav {
         .homenav {
@@ -166,7 +171,7 @@ html {
     }
 
     main {
-      width: 90%;
+      width: 100%;
       justify-self: center;
       grid-area: main;
 
@@ -186,10 +191,14 @@ html {
       }
 
       .menu-main {
-        display: flex;
+        display: none;
         flex-direction: column;
         margin: 0 10px;
         font-size: 1.3rem;
+
+        @media (min-width: 1024px) {
+          display: flex;
+        }
 
         p {
           color: #41446483;
@@ -210,6 +219,20 @@ html {
           padding: 15px;
           margin: 10px 0;
 
+          .get {
+            width: 70%;
+          }
+
+          .fa-heart {
+            color: $my-orange;
+          }
+
+          .user-pic {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+          }
+
           .fa-cog {
             color: #41446483;
           }
@@ -221,10 +244,10 @@ html {
         }
 
         .list {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
 
           li {
-            margin: 8px 0;
+            margin: 5px 0;
 
             .flex {
               justify-content: start;
@@ -256,9 +279,18 @@ html {
       }
 
       .profile-main {
+        .icons {
+          display: none;
+
+          @media (min-width: 1024px) {
+            display: flex;
+          }
+        }
+
         .icon {
           width: 60px;
-          height: 55px;
+          width: 4vw;
+          height: 4vw;
           object-fit: cover;
           border-radius: 10px;
           margin: 5px;
@@ -285,123 +317,216 @@ html {
           }
         }
 
-        .swipe-icons {
-          justify-content: center;
-          margin-top: -20px;
-          z-index: 999;
+        .main-image {
+          margin-top: 10px;
+          border-radius: 10px;
+          position: relative;
+          width: 100%;
+          height: calc(100vh - 190px);
+          background-image: url(/images/canoe-gril.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
         }
 
-        .details-main {
-          display: flex;
-          flex-direction: column;
-          margin: 0 10px;
-          font-size: 1.3rem;
+        .dots {
+          position: absolute;
+          top: 12px;
+          right: 40px;
 
-          p {
-            color: #41446483;
-          }
-
-          div {
-            background-color: white;
-            border-radius: 10px;
-            padding: 0 5px;
-
-            .gift-image,
-            .crown-image {
-              width: 60px;
-              border-radius: 10px;
-            }
-          }
-
-          .pro-ad {
+          .dot {
+            background-color: rgba(155, 155, 155, 0.623);
+            width: 15px;
+            height: 15px;
             margin: 10px 0;
-            padding-bottom: 15px;
-            padding-top: 5px;
+            border-radius: 5px;
 
-            .ad-top {
-              justify-content: space-around;
+            &:nth-child(3) {
+              background-color: $my-orange;
             }
           }
+        }
 
-          .location {
-            margin-left: -4px;
+        .location-topleft {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          color: white;
+          display: flex;
+        }
 
-            .compass {
-              background-color: $my-purple;
-              color: rgba(255, 255, 255, 0.856);
-              width: 40px;
-              height: 40px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
+        .swipe-icons {
+          position: absolute;
+          justify-content: center;
+          bottom: 40px;
+          color: white;
+
+          .fas {
+            font-size: 5rem;
           }
 
-          .person-detail {
-            .name,
-            .location,
-            .interests,
-            .languages {
-              h5 {
-                margin-top: -10px;
+          .heart {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            background-color: $my-purple;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            margin-right: 10px;
+          }
+
+          .skip {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            background-color: $my-orange;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 40px;
+            margin-left: 10px;
+
+            &:hover {
+              .fa-times {
+                color: $my-purple;
               }
             }
           }
 
-          .filter {
-            margin-bottom: 10px;
-            padding: 0 12px;
+          .right {
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(128, 128, 128, 0.438);
           }
 
-          .greybut {
-            background-color: $back-grey;
-            color: $my-grey;
+          .left {
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(128, 128, 128, 0.438);
+          }
+        }
+
+        .person-detail-small {
+          p {
+            color: #41446483;
+            font-size: 1.3rem;
           }
 
-          .gift {
-            padding: 5px 5px;
+          background-color: white;
+          padding: 0 20px;
+
+          .connect {
+            width: 80%;
+          }
+
+          .gift-image-sm {
+            width: 90px;
+          }
+
+          .name,
+          .location-sm {
+            width: 50%;
+          }
+
+          h5 {
+            margin-top: -12px;
           }
         }
       }
-    }
 
-    footer {
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      height: 70px;
-      background-color: white;
-      grid-area: foot;
-
-      @media (min-width: 1024px) {
+      .details-main {
         display: none;
-      }
+        flex-direction: column;
+        margin: 0 10px;
+        font-size: 1.3rem;
 
-      .home-foot {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10%;
-        height: 100%;
+        @media (min-width: 1024px) {
+          display: flex;
+        }
 
-        .fa-globe {
-          font-size: 4rem;
-          color: rgba(255, 255, 255, 0.897);
+        .greyit {
+          color: #41446483;
+        }
 
-          &:hover {
-            color: $my-orange;
+        div {
+          background-color: white;
+          border-radius: 10px;
+          padding: 0 5px;
+
+          .gift-image,
+          .crown-image {
+            width: 50px;
+            border-radius: 10px;
           }
         }
 
-        .foot-icon3 {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $my-purple;
-          width: 70px;
-          height: 70px;
-          margin-top: -40px;
-          border-radius: 10px;
+        .pro-ad {
+          margin: 10px 0;
+          padding-bottom: 15px;
+          padding-top: 5px;
+
+          .ad-top {
+            justify-content: space-around;
+          }
+        }
+
+        .location {
+          margin-left: -4px;
+
+          .compass {
+            background-color: $my-purple;
+            color: rgba(255, 255, 255, 0.856);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .person-detail {
+          .name,
+          .location,
+          .interests,
+          .languages {
+            height: 55px;
+
+            h5 {
+              margin-top: -12px;
+            }
+          }
+        }
+
+        .filter {
+          margin-bottom: 10px;
+          padding: 0 12px;
+        }
+
+        .greybut {
+          background-color: $back-grey;
+          color: $my-grey;
+        }
+
+        .gift {
+          padding: 5px 5px;
         }
       }
     }
