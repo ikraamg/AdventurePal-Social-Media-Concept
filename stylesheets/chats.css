@@ -2,6 +2,13 @@ html {
   font-size: 62.5%;
   color: #414464;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1024px) {
+  html {
+    overflow-y: hidden;
+  }
 }
 
 html ::-webkit-scrollbar {
@@ -21,6 +28,18 @@ html ::-webkit-scrollbar-thumb {
 
 html ::-webkit-scrollbar-thumb:hover {
   background: #f0916e;
+}
+
+html a {
+  text-decoration: none;
+  color: #414464;
+}
+
+@media (min-width: 1024px) {
+  html .scroll {
+    height: calc(100vh - 160px);
+    overflow-y: auto;
+  }
 }
 
 html body {
@@ -54,6 +73,46 @@ html body .lg {
   }
 }
 
+html body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html body .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .far,
+html body .fas,
+html body .fab,
+html body .fa {
+  font-size: 2.5rem;
+}
+
+html body .far:hover,
+html body .fas:hover,
+html body .fab:hover,
+html body .fa:hover {
+  color: #f0916e;
+}
+
 html body header {
   background-color: white;
   position: -webkit-sticky;
@@ -62,6 +121,73 @@ html body header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+}
+
+html body header .homenav {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5%;
+}
+
+@media (min-width: 1024px) {
+  html body header .homenav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body header .homenav .heading {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5rem;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body header .homenav .nav-left,
+html body header .homenav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body header .homenav .nav-left i,
+html body header .homenav .nav-right i {
+  padding: 0 10px;
+}
+
+html body header .homenav .purple-text {
+  color: #4e50b8;
+}
+
+html body header .homenav .orange-text {
+  color: #f0916e;
+}
+
+@media (min-width: 1024px) {
+  html body header .homenav .far,
+  html body header .homenav .fas,
+  html body header .homenav .light {
+    color: #41446483;
+  }
+  html body header .homenav .far:hover,
+  html body header .homenav .fas:hover,
+  html body header .homenav .light:hover {
+    color: #f0916e;
+  }
 }
 
 html body header .chatnav {
@@ -78,6 +204,12 @@ html body header .chatnav {
   font-weight: bold;
   font-size: 1.2em;
   min-height: 70px;
+}
+
+@media (min-width: 1024px) {
+  html body header .chatnav {
+    display: none;
+  }
 }
 
 html body header .chatnav form {
@@ -139,6 +271,125 @@ html body main {
   width: 90%;
 }
 
+@media (min-width: 1024px) {
+  html body main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
+html body main .upgrade {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 90%;
+  background-color: #4e50b8;
+  color: white;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+html body main .menu-main {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  height: calc(100vh);
+}
+
+@media (min-width: 1024px) {
+  html body main .menu-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body main .menu-main p {
+  color: #41446483;
+}
+
+html body main .menu-main div {
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+html body main .menu-main div img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+html body main .menu-main .user {
+  background-color: white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+html body main .menu-main .user .get {
+  width: 70%;
+}
+
+html body main .menu-main .user .fa-heart {
+  color: #f0916e;
+}
+
+html body main .menu-main .user .user-pic {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html body main .menu-main .user .fa-cog {
+  color: #41446483;
+}
+
+html body main .menu-main .user .purple-text {
+  color: #4e50b8;
+  font-weight: bold;
+}
+
+html body main .menu-main .list {
+  font-size: 1.2rem;
+}
+
+html body main .menu-main .list li {
+  margin: 5px 0;
+}
+
+html body main .menu-main .list li .flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+html body main .menu-main .list .orange-no {
+  width: 40px;
+  background-color: #f0916e;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .grey-no {
+  width: 40px;
+  background-color: rgba(211, 211, 211, 0.431);
+  text-align: center;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .fa,
+html body main .menu-main .list .fas,
+html body main .menu-main .list .fab,
+html body main .menu-main .list .far {
+  padding-right: 10px;
+}
+
 html body main .chats-main {
   width: 100%;
 }
@@ -186,6 +437,7 @@ html body main .chats-main .messages img {
 
 html body main .chats-main .messages .content {
   padding-left: 10px;
+  min-width: 180px;
 }
 
 html body main .chats-main .messages .content h5 {
@@ -207,16 +459,6 @@ html body main .chats-main .messages .time {
   padding-top: 4px;
 }
 
-html body .far,
-html body .fas {
-  font-size: 2.5rem;
-}
-
-html body .far:hover,
-html body .fas:hover {
-  color: #f0916e;
-}
-
 html body footer {
   position: -webkit-sticky;
   position: sticky;
@@ -227,6 +469,13 @@ html body footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: foot;
+}
+
+@media (min-width: 1024px) {
+  html body footer {
+    width: 60%;
+    margin-left: 35%;
+  }
 }
 
 html body footer .chats-foot {

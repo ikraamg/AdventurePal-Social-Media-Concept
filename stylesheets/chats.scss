@@ -10,9 +10,14 @@ $my-grey: #414464;
 $back-grey: rgba(211, 211, 211, 0.431);
 
 html {
-  font-size: 62.5%; //Remember to use REM: 1REM is 10px
+  font-size: 62.5%;
   color: $my-grey;
   font-family: $font;
+  scroll-behavior: smooth;
+
+  @media (min-width: 1024px) {
+    overflow-y: hidden;
+  }
 
   ::-webkit-scrollbar {
     width: 1rem;
@@ -32,6 +37,18 @@ html {
     }
   }
 
+  a {
+    text-decoration: none;
+    color: $my-grey;
+  }
+
+  .scroll {
+    @media (min-width: 1024px) {
+      height: calc(100vh - 160px);
+      overflow-y: auto;
+    }
+  }
+
   body {
     font-size: 1.6rem;
     display: grid;
@@ -45,7 +62,6 @@ html {
       'main'
       'foot';
     grid-template-columns: 1fr;
-    // grid-template-rows: repeat(3, minmax(50px, 1fr));
     grid-gap: 10px;
 
     .greendot {
@@ -66,6 +82,30 @@ html {
       }
     }
 
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .flex-column {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .far,
+    .fas,
+    .fab,
+    .fa {
+      font-size: 2.5rem;
+
+      &:hover {
+        color: $my-orange;
+      }
+    }
+
     // * {
     //   border: 2px dotted rgb(0, 0, 0);
     // }
@@ -76,6 +116,55 @@ html {
       top: 0;
       grid-area: head;
 
+      .homenav {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+
+        @media (min-width: 1024px) {
+          display: flex;
+        }
+
+        .heading {
+          font-family: 'Dosis', sans-serif;
+          font-size: 1.5rem;
+          height: 70px;
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-left,
+        .nav-right {
+          display: flex;
+          align-items: center;
+
+          i {
+            padding: 0 10px;
+          }
+        }
+
+        .purple-text {
+          color: $my-purple;
+        }
+
+        .orange-text {
+          color: $my-orange;
+        }
+
+        @media (min-width: 1024px) {
+          .far,
+          .fas,
+          .light {
+            color: #41446483;
+
+            &:hover {
+              color: $my-orange;
+            }
+          }
+        }
+      }
+
       .chatnav {
         display: flex;
         justify-content: space-between;
@@ -84,6 +173,10 @@ html {
         font-weight: bold;
         font-size: 1.2em;
         min-height: 70px;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
 
         form {
           width: 100%;
@@ -133,6 +226,109 @@ html {
       justify-self: center;
       width: 90%; //check this when you move it over.
 
+      @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .upgrade {
+        align-self: center;
+        width: 90%;
+        background-color: $my-purple;
+        color: white;
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      .menu-main {
+        display: none;
+        flex-direction: column;
+        margin: 0 10px;
+        font-size: 1.3rem;
+        height: calc(100vh);
+
+        @media (min-width: 1024px) {
+          display: flex;
+        }
+
+        p {
+          color: #41446483;
+        }
+
+        div {
+          border-radius: 10px;
+          padding: 0 5px;
+
+          img {
+            width: 80px;
+            border-radius: 10px;
+          }
+        }
+
+        .user {
+          background-color: white;
+          padding: 15px;
+          margin: 10px 0;
+
+          .get {
+            width: 70%;
+          }
+
+          .fa-heart {
+            color: $my-orange;
+          }
+
+          .user-pic {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+          }
+
+          .fa-cog {
+            color: #41446483;
+          }
+
+          .purple-text {
+            color: $my-purple;
+            font-weight: bold;
+          }
+        }
+
+        .list {
+          font-size: 1.2rem;
+
+          li {
+            margin: 5px 0;
+
+            .flex {
+              justify-content: start;
+            }
+          }
+
+          .orange-no {
+            width: 40px;
+            background-color: $my-orange;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+          }
+
+          .grey-no {
+            width: 40px;
+            background-color: $back-grey;
+            text-align: center;
+            border-radius: 5px;
+          }
+
+          .fa,
+          .fas,
+          .fab,
+          .far {
+            padding-right: 10px;
+          }
+        }
+      }
+
       .chats-main {
         width: 100%;
 
@@ -167,6 +363,7 @@ html {
 
           .content {
             padding-left: 10px;
+            min-width: 180px;
 
             h5 {
               font-size: 1.8rem;
@@ -190,15 +387,6 @@ html {
       }
     }
 
-    .far,
-    .fas {
-      font-size: 2.5rem;
-
-      &:hover {
-        color: $my-orange;
-      }
-    }
-
     footer {
       position: sticky;
       bottom: 0;
@@ -206,6 +394,11 @@ html {
       height: 70px;
       background-color: white;
       grid-area: foot;
+
+      @media (min-width: 1024px) {
+        width: 60%;
+        margin-left: 35%;
+      }
 
       .chats-foot {
         box-shadow: 0 -55px 40px 7px rgba(156, 156, 156, 0.52);
