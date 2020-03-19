@@ -47,6 +47,11 @@ html {
     }
   }
 
+  a {
+    text-decoration: none;
+    color: $my-grey;
+  }
+
   body {
     font-size: 1.6rem;
     display: grid;
@@ -130,7 +135,7 @@ html {
           padding: 0 5%;
 
           .heading {
-            font-weight: bold;
+            font-family: 'Dosis', sans-serif;
             font-size: 1.5rem;
             height: 70px;
             display: flex;
