@@ -5,12 +5,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (min-width: 1024px) {
-  html {
-    overflow-y: hidden;
-  }
-}
-
 html ::-webkit-scrollbar {
   width: 1rem;
 }
@@ -55,6 +49,32 @@ html body .lg {
   display: none;
 }
 
+html body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html body .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 1024px) {
   html body .sm {
     display: none;
@@ -64,12 +84,30 @@ html body .lg {
   }
 }
 
+html body * {
+  border: 2px dotted black;
+}
+
 html body .orange-hover:hover {
   color: #f0916e;
 }
 
 html body .greendot {
   color: #17dd17;
+}
+
+html body .fa,
+html body .fas,
+html body .fab,
+html body .far {
+  font-size: 2.5rem;
+}
+
+html body .fa:hover,
+html body .fas:hover,
+html body .fab:hover,
+html body .far:hover {
+  color: #f0916e;
 }
 
 html body header {
@@ -82,7 +120,7 @@ html body header {
   grid-area: head;
 }
 
-html body header nav .messagenav {
+html body header nav .homenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,7 +133,7 @@ html body header nav .messagenav {
   padding: 0 5%;
 }
 
-html body header nav .messagenav .heading {
+html body header nav .homenav .heading {
   font-weight: bold;
   font-size: 1.5rem;
   height: 70px;
@@ -107,8 +145,8 @@ html body header nav .messagenav .heading {
           align-items: center;
 }
 
-html body header nav .messagenav .nav-left,
-html body header nav .messagenav .nav-right {
+html body header nav .homenav .nav-left,
+html body header nav .homenav .nav-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,28 +155,28 @@ html body header nav .messagenav .nav-right {
           align-items: center;
 }
 
-html body header nav .messagenav .nav-left i,
-html body header nav .messagenav .nav-right i {
+html body header nav .homenav .nav-left i,
+html body header nav .homenav .nav-right i {
   padding: 0 10px;
 }
 
-html body header nav .messagenav .purple-text {
+html body header nav .homenav .purple-text {
   color: #4e50b8;
 }
 
-html body header nav .messagenav .orange-text {
+html body header nav .homenav .orange-text {
   color: #f0916e;
 }
 
 @media (min-width: 1024px) {
-  html body header nav .messagenav .far,
-  html body header nav .messagenav .fas,
-  html body header nav .messagenav .light {
+  html body header nav .homenav .far,
+  html body header nav .homenav .fas,
+  html body header nav .homenav .light {
     color: #41446483;
   }
-  html body header nav .messagenav .far:hover,
-  html body header nav .messagenav .fas:hover,
-  html body header nav .messagenav .light:hover {
+  html body header nav .homenav .far:hover,
+  html body header nav .homenav .fas:hover,
+  html body header nav .homenav .light:hover {
     color: #f0916e;
   }
 }
@@ -156,158 +194,222 @@ html body main {
   html body main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1.2fr 1.8fr 1fr;
-        grid-template-columns: 1.2fr 1.8fr 1fr;
+    -ms-grid-columns: 1.2fr 1.8fr 1.2fr;
+        grid-template-columns: 1.2fr 1.8fr 1.2fr;
     width: 90%;
   }
 }
 
-html body main .chats-main {
-  width: 100%;
+html body main .upgrade {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 90%;
+  background-color: #4e50b8;
+  color: white;
+  border-radius: 6px;
+  padding: 8px;
 }
 
-@media (min-width: 1024px) {
-  html body main .chats-main {
-    background-color: white;
-    width: 100%;
-    padding: 0 10px;
-  }
+html body main .menu-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+  font-size: 1.3rem;
 }
 
-html body main .chats-main * {
+html body main .menu-main p {
+  color: #41446483;
+}
+
+html body main .menu-main div {
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+html body main .menu-main div img {
+  width: 80px;
   border-radius: 10px;
 }
 
-html body main .chats-main .messages {
+html body main .menu-main .user {
   background-color: white;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100px 1fr 100px;
-      grid-template-columns: 100px 1fr 100px;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin: 10px 0;
 }
 
-@media (min-width: 1024px) {
-  html body main .chats-main .messages {
-    margin-bottom: 0;
-  }
+html body main .menu-main .user .fa-cog {
+  color: #41446483;
 }
 
-html body main .chats-main .messages img {
-  width: 65px;
-  height: 65px;
+html body main .menu-main .user .purple-text {
+  color: #4e50b8;
+  font-weight: bold;
+}
+
+html body main .menu-main .list {
+  font-size: 1.3rem;
+}
+
+html body main .menu-main .list li {
+  margin: 8px 0;
+}
+
+html body main .menu-main .list li .flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+html body main .menu-main .list .orange-no {
+  width: 40px;
+  background-color: #f0916e;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .grey-no {
+  width: 40px;
+  background-color: rgba(211, 211, 211, 0.431);
+  text-align: center;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .fa,
+html body main .menu-main .list .fas,
+html body main .menu-main .list .fab,
+html body main .menu-main .list .far {
+  padding-right: 10px;
+}
+
+html body main .profile-main .icon {
+  width: 60px;
+  height: 55px;
   -o-object-fit: cover;
      object-fit: cover;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  border-radius: 10px;
+  margin: 5px;
 }
 
-html body main .chats-main .messages .content {
-  padding-left: 10px;
+html body main .profile-main .fa-ellipsis-v {
+  margin: 0 13px;
 }
 
-html body main .chats-main .messages .content h5 {
-  font-size: 1.8rem;
-  margin: 0;
-  margin-top: 10px;
+html body main .profile-main .circle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-color: #f0916e;
+  border-radius: 100%;
+  margin-left: -4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
 }
 
-html body main .chats-main .messages .content p {
+html body main .profile-main .circle .x {
+  margin-top: 12.5px;
+}
+
+html body main .profile-main .swipe-icons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -20px;
+  z-index: 999;
+}
+
+html body main .profile-main .details-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
   font-size: 1.3rem;
-  color: #414464c9;
 }
 
-html body main .chats-main .messages .time {
-  text-align: center;
-  font-size: 1.1rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  padding-top: 4px;
+html body main .profile-main .details-main p {
+  color: #41446483;
 }
 
-html body main .message-main .messages {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100px 1fr;
-      grid-template-columns: 100px 1fr;
-  -ms-grid-rows: 1fr 50px;
-      grid-template-rows: 1fr 50px;
-  margin-bottom: 20px;
-  justify-items: right;
-  -ms-grid-row-align: start;
-      align-self: start;
+html body main .profile-main .details-main div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 5px;
 }
 
-html body main .message-main .messages .spacer {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-html body main .message-main .messages .content {
-  background-color: #4e50b82f;
-  padding: 10px;
-  margin: 0 30px;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
+html body main .profile-main .details-main div .gift-image,
+html body main .profile-main .details-main div .crown-image {
+  width: 60px;
   border-radius: 10px;
 }
 
-html body main .message-main .messages .time {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 0 30px;
-  font-size: 1.3rem;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+html body main .profile-main .details-main .pro-ad {
+  margin: 10px 0;
+  padding-bottom: 15px;
+  padding-top: 5px;
 }
 
-html body main .message-main .left {
-  -ms-grid-columns: 1fr 100px;
-      grid-template-columns: 1fr 100px;
-  justify-items: left;
+html body main .profile-main .details-main .pro-ad .ad-top {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-html body main .message-main .left .spacer {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+html body main .profile-main .details-main .location {
+  margin-left: -4px;
 }
 
-html body main .message-main .left .content {
-  background-color: rgba(211, 211, 211, 0.589);
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
+html body main .profile-main .details-main .location .compass {
+  background-color: #4e50b8;
+  color: rgba(255, 255, 255, 0.856);
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-html body main .message-main .left .time {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+html body main .profile-main .details-main .person-detail .name h5,
+html body main .profile-main .details-main .person-detail .location h5,
+html body main .profile-main .details-main .person-detail .interests h5,
+html body main .profile-main .details-main .person-detail .languages h5 {
+  margin-top: -10px;
 }
 
-html body .far,
-html body .fas {
-  font-size: 2.5rem;
+html body main .profile-main .details-main .filter {
+  margin-bottom: 10px;
+  padding: 0 12px;
 }
 
-html body .far:hover,
-html body .fas:hover {
-  color: #f0916e;
+html body main .profile-main .details-main .greybut {
+  background-color: rgba(211, 211, 211, 0.431);
+  color: #414464;
+}
+
+html body main .profile-main .details-main .gift {
+  padding: 5px 5px;
 }
 
 html body footer {
@@ -328,7 +430,7 @@ html body footer {
   }
 }
 
-html body footer .chats-foot {
+html body footer .home-foot {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,16 +444,16 @@ html body footer .chats-foot {
   height: 100%;
 }
 
-html body footer .chats-foot .fa-globe {
+html body footer .home-foot .fa-globe {
   font-size: 4rem;
   color: rgba(255, 255, 255, 0.897);
 }
 
-html body footer .chats-foot .fa-globe:hover {
+html body footer .home-foot .fa-globe:hover {
   color: #f0916e;
 }
 
-html body footer .chats-foot .foot-icon3 {
+html body footer .home-foot .foot-icon3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

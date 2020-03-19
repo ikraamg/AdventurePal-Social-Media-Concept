@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <!-- //add icon!!!!!!!!!!!!!!!!!!!!!!!! -->
     <script
       src="https://kit.fontawesome.com/32efc5f671.js"
@@ -19,7 +23,7 @@
   <body>
     <header>
       <nav>
-        <section class="messagenav">
+        <section class="homenav">
           <div class="nav-left">
             <i class="far fa-bell sm"></i>
             <i class="far fa-compass lg"></i>
@@ -44,301 +48,154 @@
     </header>
 
     <main>
-      <section class="chats-main lg scroll">
-        <div class="messages message1">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
+      <section class="menu-main lg">
+        <div class="user flex flex-column">
+          <div class="ad-top flex">
+            <img src="/images/profile.jpg" alt="crown" />
+            <div>
+              <h3>Ikraam Ghoor</h3>
+              <p>Status: <span class="purple-text">Without premium</span></p>
+            </div>
+            <i class="fas fa-cog"></i>
           </div>
-          <div class="time"><p>23 min</p></div>
+          <div class="flex">
+            <button class="upgrade">Get Premium</button>
+          </div>
         </div>
-        <div class="messages message2">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message3">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message4">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message5">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message6">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message7">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message8">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message9">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message10">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message11">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message12">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message13">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message14">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message15">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message16">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message17">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message18">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message19">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
-        </div>
-        <div class="messages message20">
-          <img src="images/message-pic.jpg" alt="Woman in Forest" />
-          <div class="content">
-            <h5>Ophelia Sinclair <span class="greendot">&nbsp;•</span></h5>
-            <p>✓ Hello 😄 Haven't seen you in a while!</p>
-          </div>
-          <div class="time"><p>23 min</p></div>
+
+        <div class="list">
+          <li class="flex item item1">
+            <div class="flex">
+              <i class="fas fa-th"></i>
+              <p>Find Adventurers</p>
+            </div>
+          </li>
+          <li class="flex item item2">
+            <div class="flex">
+              <i class="fas fa-layer-group"></i>
+              <p>Nearby Adventurers</p>
+            </div>
+          </li>
+          <li class="flex item item3">
+            <div class="flex">
+              <i class="fab fa-youtube"></i>
+              <p>Live Channels</p>
+            </div>
+            <div class="grey-no">12</div>
+          </li>
+          <li class="flex item item4">
+            <div class="flex">
+              <i class="far fa-comments"></i>
+              <p>Messages</p>
+            </div>
+            <div class="orange-no">32</div>
+          </li>
+          <li class="flex item item5">
+            <div class="flex">
+              <i class="far fa-star"></i>
+              <p>Featured Profiles</p>
+            </div>
+          </li>
+          <li class="flex item item6">
+            <div class="flex">
+              <i class="fas fa-gift"></i>
+              <p>Gifts</p>
+            </div>
+            <div class="orange-no">4</div>
+          </li>
+          <li class="flex item item7">
+            <div class="flex">
+              <i class="fas fa-chart-line"></i>
+              <p>Popular</p>
+            </div>
+          </li>
+          <li class="flex item item8">
+            <div class="flex">
+              <i class="fas fa-tasks"></i>
+              <p>Daily Tasks</p>
+            </div>
+          </li>
         </div>
       </section>
 
-      <section class="message-main scroll">
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
-          </div>
-          <div class="time">1:16 PM</div>
+      <section class="profile-main">
+        <div class="flex icons">
+          <img src="/images/message-pic.jpg" alt="" class="icon icon1" />
+          <div class="circle"><p class="x">x</p></div>
+          <i class="fas fa-ellipsis-v"></i>
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
+          <img src="/images/message-pic.jpg" alt="" class="icon" />
         </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
+
+
+          <div class="swipe-icons flex">
+            <div class="heart"><i class="fas fa-heart"></i></div>
+            <div class="skip">
+              <i class="fas fa-times"></i>
+            </div>
           </div>
-          <div class="time">1:30 PM</div>
         </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
+      </section>
+
+      <section class="details-main lg">
+        <div class="pro-ad flex flex-column">
+          <div class="ad-top flex">
+            <img src="/images/crown.png" alt="crown" class="crown-image" />
+            <div>
+              <h3>Unlimited Adventures</h3>
+              <p>Connect with unlimited adventurers</p>
+            </div>
           </div>
-          <div class="time">1:16 PM</div>
+          <button class="upgrade">Upgrade to Pro</button>
         </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
+
+        <div class="filter flex">
+          <p>Filter Search</p>
+          <i class="fas fa-sliders-h"></i>
         </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
+
+        <div class="person-detail flex flex-column">
+          <div class="name">
+            <p>Name and Age</p>
+            <h5>Ophelia Sinclair, 26<span class="greendot">&nbsp;•</span></h5>
           </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
+          <div class="location flex">
+            <div>
+              <p>Location</p>
+              <h5>London, United Kingdom</h5>
+            </div>
+            <div class="compass">
+              <i class="far fa-compass lg"></i>
+            </div>
           </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
+          <div class="interests flex flex-column">
+            <p>Interests</p>
+            <h5>Hiking, surfing, running, netball, swimming, skiing</h5>
           </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
+          <div class="languages flex flex-column">
+            <p>Languages</p>
+            <h5>English, Russian (conversational)</h5>
           </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
+          <button class="upgrade greybut">View full Profile</button>
+
+          <div class="gift flex">
+            <img src="/images/message.png" alt="gift" class="gift-image" />
+
+            <div>
+              <h3>Connect now</h3>
+              <p>Skip the swipe and send a message now</p>
+            </div>
           </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
-          </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
-          </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
-          </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
-        </div>
-        <div class="messages message1 right">
-          <div class="spacer"></div>
-          <div class="content">
-            Hi there! I am going on a hike next week, want to join? 😁
-          </div>
-          <div class="time">1:16 PM</div>
-        </div>
-        <div class="messages message2 left" id="lst">
-          <div class="spacer"></div>
-          <div class="content">
-            Yeah! I'd love to join! 🤩 How far is it away from the city?
-          </div>
-          <div class="time">1:30 PM</div>
         </div>
       </section>
     </main>
 
     <footer>
-      <section class="chats-foot sm">
+      <section class="home-foot sm">
         <div class="foot-icons foot-icon1">
           <i class="fas fa-search"></i>
         </div>
@@ -357,5 +214,7 @@
         </div>
       </section>
     </footer>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>
