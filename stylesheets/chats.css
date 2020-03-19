@@ -56,6 +56,10 @@ html body {
   grid-gap: 10px;
 }
 
+html body button {
+  outline: none;
+}
+
 html body .greendot {
   color: #17dd17;
 }

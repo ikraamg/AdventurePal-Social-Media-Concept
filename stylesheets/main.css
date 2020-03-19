@@ -50,6 +50,10 @@ html body {
   grid-gap: 10px;
 }
 
+html body button {
+  outline: none;
+}
+
 html body .lg {
   display: none;
 }

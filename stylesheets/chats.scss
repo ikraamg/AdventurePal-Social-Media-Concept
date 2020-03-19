@@ -64,6 +64,10 @@ html {
     grid-template-columns: 1fr;
     grid-gap: 10px;
 
+    button {
+      outline: none;
+    }
+
     .greendot {
       color: rgb(23, 221, 23);
     }

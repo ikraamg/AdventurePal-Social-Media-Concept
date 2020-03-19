@@ -66,6 +66,10 @@ html {
     grid-template-columns: 1fr;
     grid-gap: 10px;
 
+    button {
+      outline: none;
+    }
+
     .lg {
       display: none;
     }
