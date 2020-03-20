@@ -51,6 +51,11 @@ html body {
   grid-gap: 10px;
 }
 
+html body a {
+  text-decoration: none;
+  color: #414464;
+}
+
 html body .none,
 html body .lg {
   display: none;

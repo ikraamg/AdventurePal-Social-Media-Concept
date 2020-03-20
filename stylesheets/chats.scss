@@ -52,7 +52,6 @@ html {
   body {
     font-size: 1.6rem;
     display: grid;
-    // max-width: 1350px;
     min-width: 400px;
     margin: 0 auto;
     background-color: $back-grey;
@@ -110,10 +109,6 @@ html {
         color: $my-orange;
       }
     }
-
-    // * {
-    //   border: 2px dotted rgb(0, 0, 0);
-    // }
 
     header {
       background-color: white;

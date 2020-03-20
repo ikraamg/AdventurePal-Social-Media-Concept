@@ -50,7 +50,6 @@ html {
   body {
     font-size: 1.6rem;
     display: grid;
-    // max-width: 1350px;
     min-width: 400px;
     margin: 0 auto;
     background-color: $back-grey;
@@ -61,6 +60,11 @@ html {
       'foot';
     grid-template-columns: 1fr;
     grid-gap: 10px;
+
+    a {
+      text-decoration: none;
+      color: $my-grey;
+    }
 
     .none,
     .lg {
