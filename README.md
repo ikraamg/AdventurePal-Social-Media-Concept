@@ -15,7 +15,7 @@ This project was built from a wireframe and a few design images to create a full
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/ikraamg/HTML-SCSS-Capstone-Project/capstone-feature/index.html)
+[Live Demo Link](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/b3441659ece7e9e139a1bff78887914b62ce486a/index.html)
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ Start by:
 
 ### 🚀 Potential/Future Features
 
-- Improve Demo content
+- Improve demo content
 - Refactor SCSS code to remove duplications
 - Add more animations
 - Add more pages
@@ -67,8 +67,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - The original design is attributed to [Vlad Ermakov](https://dribbble.com/ermalength), [original design](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
-- The original design is licenced under the [creative commons 4.0 licence](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## 📝 License
 
-This project is [MIT](LICENSE.md) licensed
+- The original design is licenced under the [Creative Commons 4.0 licence](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+- This project is [MIT](LICENSE.md) licensed
