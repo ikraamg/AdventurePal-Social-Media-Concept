@@ -2,7 +2,7 @@
 
 # AdventurePal - HTML Capstone Project
 
-> A social media concept for matching people who enjou outside adventures
+> A social media concept for matching people who enjoy outside adventures together
 
 ![screenshot](images/capstone.gif)
 
