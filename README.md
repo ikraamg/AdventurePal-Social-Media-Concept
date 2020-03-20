@@ -4,6 +4,8 @@
 
 > A social media concept for matching people who enjoy outside adventures together
 
+[Video of Presentation](https://www.loom.com/share/f2a13e1ed09a4470852bf6f3edbeac7b)
+
 ![screenshot](images/capstone.gif)
 
 This project was built from a wireframe and a few design images to create a fully coded webpage:
