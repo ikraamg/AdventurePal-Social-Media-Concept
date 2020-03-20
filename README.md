@@ -4,7 +4,7 @@
 
 > A social media concept for matching people who enjou outside adventures
 
-![screenshot](images/ss.png)
+![screenshot](images/capstone.gif)
 
 This project was built from a wireframe and a few design images to create a fully coded webpage.
 
