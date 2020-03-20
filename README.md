@@ -1,23 +1,21 @@
 [![hire-badge](https://img.shields.io/badge/Consult%20/%20Hire%20Ikraam-Click%20to%20Contact-brightgreen)](mailto:consult.ikraam@gmail.com) [![Twitter Follow](https://img.shields.io/twitter/follow/GhoorIkraam?label=Follow%20Ikraam%20on%20Twitter&style=social)](https://twitter.com/GhoorIkraam)
 
-# Project Name
+# AdventurePal - HTML Capstone Project
 
-> One paragraph statement about the project.
+> A social media concept for matching people who enjou outside adventures
 
-![screenshot](ss.png)
+![screenshot](images/ss.png)
 
-Additional description about the project and its features.
+This project was built from a wireframe and a few design images to create a fully coded webpage.
 
 ## Built With
 
 - HTML 5
-- CSS 3
-- frameworks,
-- technologies used
+- CSS 3 - Layout with grid and flex
 
 ## Live Demo
 
-[Live Demo Link](https://ikraamg.github.io/<REPO_NAME>)
+[Live Demo Link](https://raw.githack.com/ikraamg/HTML-SCSS-Capstone-Project/capstone-feature/index.html)
 
 ## Getting Started
 
@@ -27,18 +25,8 @@ To get a local copy up and running follow these steps:
 
 A browser (preferably Chrome)
 
-### Setup
-
-### Install
-
-### Usage
-
 - Fork/Clone this project to your local machine
 - Open index.html in your browser
-
-### Run tests
-
-### Deployment
 
 ## Authors
 
@@ -67,9 +55,10 @@ Start by:
 
 ### 🚀 Potential/Future Features
 
-- Improve/Add features
-- Feature 2
-- Improvement 3
+- Improve Demo content
+- Refactor SCSS code to remove duplications
+- Add more animations
+- Add more pages
 
 ## Show your support
 
@@ -77,11 +66,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- The Odin project for the project plan
-- sanitize.css creators for the web reset
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- The original design is attributed to [Vlad Ermakov](https://dribbble.com/ermalength). Link to the [original design](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
+- The design is licenced under the [creative commons 4.0 licence](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## 📝 License
 
