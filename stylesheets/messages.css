@@ -51,6 +51,7 @@ html body {
   grid-gap: 10px;
 }
 
+html body .none,
 html body .lg {
   display: none;
 }

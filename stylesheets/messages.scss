@@ -62,6 +62,7 @@ html {
     grid-template-columns: 1fr;
     grid-gap: 10px;
 
+    .none,
     .lg {
       display: none;
     }
@@ -76,9 +77,6 @@ html {
       }
     }
 
-    // * {
-    //   border: 2px dotted rgb(0, 0, 0);
-    // }
     .orange-hover:hover {
       color: $my-orange;
     }
