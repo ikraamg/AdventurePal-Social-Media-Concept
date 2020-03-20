@@ -15,7 +15,7 @@ This project was built from a wireframe and a few design images to create a full
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/b3441659ece7e9e139a1bff78887914b62ce486a/index.html)
+[Live Demo Link](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/38345fa5ff2f31b8fe10eec84001f4c847bad4bc/index.html)
 
 ## Getting Started
 
