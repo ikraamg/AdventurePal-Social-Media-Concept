@@ -1,0 +1,626 @@
+html {
+  font-size: 62.5%;
+  color: #414464;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html ::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html ::-webkit-scrollbar-track {
+  background: rgba(211, 211, 211, 0.431);
+  -webkit-box-shadow: inset 0 0 4px;
+  box-shadow: inset 0 0 4px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #4e50b8;
+  border-radius: 0.4rem;
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+  background: #f0916e;
+}
+
+@media (min-width: 1024px) {
+  html .scroll {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+}
+
+html a {
+  text-decoration: none;
+  color: #414464;
+}
+
+html body {
+  font-size: 1.6rem;
+  display: -ms-grid;
+  display: grid;
+  min-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(211, 211, 211, 0.431);
+  font-family: 'Open Sans', sans-serif;
+  grid-template-areas: 'head' 'main' 'foot';
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+html body button {
+  outline: none;
+}
+
+html body .none,
+html body .lg {
+  display: none;
+}
+
+html body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+html body .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  html body .sm {
+    display: none;
+  }
+
+  html body .lg {
+    display: block;
+  }
+}
+
+html body .orange-hover:hover {
+  color: #f0916e;
+}
+
+html body .greendot {
+  color: #17dd17;
+}
+
+html body .pushup {
+  margin-top: -10px;
+}
+
+html body .fa,
+html body .fas,
+html body .fab,
+html body .far {
+  font-size: 2.5rem;
+}
+
+html body .fa:hover,
+html body .fas:hover,
+html body .fab:hover,
+html body .far:hover {
+  color: #f0916e;
+}
+
+html body header {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+  z-index: 99;
+}
+
+html body header nav .homenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 5%;
+}
+
+html body header nav .homenav .heading {
+  font-family: 'Dosis', sans-serif;
+  font-size: 2.6rem;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body header nav .homenav .nav-left,
+html body header nav .homenav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body header nav .homenav .nav-left i,
+html body header nav .homenav .nav-right i {
+  padding: 0 10px;
+}
+
+html body header nav .homenav .purple-text {
+  color: #4e50b8;
+}
+
+html body header nav .homenav .orange-text {
+  color: #f0916e;
+}
+
+@media (min-width: 1024px) {
+  html body header nav .homenav .far,
+  html body header nav .homenav .fas,
+  html body header nav .homenav .light {
+    color: #41446483;
+  }
+
+  html body header nav .homenav .far:hover,
+  html body header nav .homenav .fas:hover,
+  html body header nav .homenav .light:hover {
+    color: #f0916e;
+  }
+}
+
+html body main {
+  width: 100%;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+@media (min-width: 1024px) {
+  html body main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 1.8fr 1.2fr;
+    grid-template-columns: 1.2fr 1.8fr 1.2fr;
+    width: 90%;
+  }
+}
+
+html body main .upgrade {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 90%;
+  background-color: #4e50b8;
+  color: white;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+html body main .menu-main {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  html body main .menu-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body main .menu-main p {
+  color: #41446483;
+}
+
+html body main .menu-main div {
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+html body main .menu-main div img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+html body main .menu-main .user {
+  background-color: white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+html body main .menu-main .user .get {
+  width: 70%;
+}
+
+html body main .menu-main .user .fa-heart {
+  color: #f0916e;
+}
+
+html body main .menu-main .user .user-pic {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+html body main .menu-main .user .fa-cog {
+  color: #41446483;
+}
+
+html body main .menu-main .user .purple-text {
+  color: #4e50b8;
+  font-weight: bold;
+}
+
+html body main .menu-main .list {
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+html body main .menu-main .list li {
+  margin: 5px 0;
+}
+
+html body main .menu-main .list li .flex {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+html body main .menu-main .list .orange-no {
+  width: 40px;
+  background-color: #f0916e;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .grey-no {
+  width: 40px;
+  background-color: rgba(211, 211, 211, 0.431);
+  text-align: center;
+  border-radius: 5px;
+}
+
+html body main .menu-main .list .fa,
+html body main .menu-main .list .fas,
+html body main .menu-main .list .fab,
+html body main .menu-main .list .far {
+  padding-right: 10px;
+}
+
+html body main .profile-main .icons {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  html body main .profile-main .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body main .profile-main .icon {
+  width: 60px;
+  width: 4vw;
+  height: 4vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+html body main .profile-main .fa-ellipsis-v {
+  margin: 0 13px;
+}
+
+html body main .profile-main .circle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-color: #f0916e;
+  border-radius: 100%;
+  margin-left: -4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+}
+
+html body main .profile-main .circle .x {
+  margin-top: 12.5px;
+}
+
+html body main .profile-main .main-image {
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 190px);
+  background-image: url(https://cdn.pixabay.com/photo/2015/12/08/00/38/canoeing-1081890_960_720.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html body main .profile-main .dots {
+  position: absolute;
+  top: 12px;
+  right: 40px;
+}
+
+html body main .profile-main .dots .dot {
+  background-color: rgba(155, 155, 155, 0.623);
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+html body main .profile-main .dots .dot:nth-child(3) {
+  background-color: #f0916e;
+}
+
+html body main .profile-main .location-topleft {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body main .profile-main .swipe-icons {
+  position: absolute;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  bottom: 40px;
+  color: white;
+}
+
+html body main .profile-main .swipe-icons .fas {
+  font-size: 5rem;
+}
+
+html body main .profile-main .swipe-icons .heart {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background-color: #4e50b8;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+html body main .profile-main .swipe-icons .skip {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  background-color: #f0916e;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 40px;
+  margin-left: 10px;
+}
+
+html body main .profile-main .swipe-icons .skip:hover .fa-times {
+  color: #4e50b8;
+}
+
+html body main .profile-main .swipe-icons .right {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(128, 128, 128, 0.438);
+}
+
+html body main .profile-main .swipe-icons .left {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(128, 128, 128, 0.438);
+}
+
+html body main .profile-main .person-detail-small {
+  background-color: white;
+  padding: 0 20px;
+}
+
+html body main .profile-main .person-detail-small p {
+  color: #41446483;
+  font-size: 1.3rem;
+}
+
+html body main .profile-main .person-detail-small .connect {
+  width: 80%;
+}
+
+html body main .profile-main .person-detail-small .gift-image-sm {
+  width: 90px;
+}
+
+html body main .profile-main .person-detail-small .name,
+html body main .profile-main .person-detail-small .location-sm {
+  width: 50%;
+}
+
+html body main .profile-main .person-detail-small h5 {
+  margin-top: -12px;
+}
+
+html body main .details-main {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1024px) {
+  html body main .details-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+html body main .details-main .greyit {
+  color: #41446483;
+}
+
+html body main .details-main div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+html body main .details-main div .gift-image,
+html body main .details-main div .crown-image {
+  width: 50px;
+  border-radius: 10px;
+}
+
+html body main .details-main .pro-ad {
+  margin: 10px 0;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
+html body main .details-main .pro-ad .ad-top {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+html body main .details-main .location {
+  margin-left: -4px;
+}
+
+html body main .details-main .location .compass {
+  background-color: #4e50b8;
+  color: rgba(255, 255, 255, 0.856);
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html body main .details-main .person-detail .name,
+html body main .details-main .person-detail .location,
+html body main .details-main .person-detail .interests,
+html body main .details-main .person-detail .languages {
+  height: 55px;
+}
+
+html body main .details-main .person-detail .name h5,
+html body main .details-main .person-detail .location h5,
+html body main .details-main .person-detail .interests h5,
+html body main .details-main .person-detail .languages h5 {
+  margin-top: -12px;
+}
+
+html body main .details-main .filter {
+  margin-bottom: 10px;
+  padding: 0 12px;
+}
+
+html body main .details-main .greybut {
+  background-color: rgba(211, 211, 211, 0.431);
+  color: #414464;
+}
+
+html body main .details-main .gift {
+  padding: 5px 5px;
+}
