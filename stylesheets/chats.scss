@@ -229,7 +229,7 @@ html {
     main {
       grid-area: main;
       justify-self: center;
-      width: 90%; //check this when you move it over.
+      width: 90%;
 
       @media (min-width: 1024px) {
         display: grid;
@@ -336,6 +336,7 @@ html {
       }
 
       .chats-main {
+        border-radius: 10px;
         width: 100%;
 
         @media (min-width: 1024px) {
@@ -354,6 +355,8 @@ html {
           grid-template-columns: 100px 1fr 100px;
           grid-template-rows: 1fr;
           margin-bottom: 20px;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+          border-radius: 0;
 
           @media (min-width: 1024px) {
             margin-bottom: 0;
@@ -400,6 +403,7 @@ html {
       height: 70px;
       background-color: white;
       grid-area: foot;
+      border-radius: 10px;
 
       @media (min-width: 1024px) {
         width: 60%;

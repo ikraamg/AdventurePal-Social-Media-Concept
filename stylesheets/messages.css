@@ -93,6 +93,7 @@ html body header {
   }
 
   html body header nav .chatnav {
+    border-right: 10px solid rgba(128, 128, 128, 0.178);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -242,6 +243,8 @@ html body main .chats-main .messages {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
   margin-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+  border-radius: 0;
 }
 
 @media (min-width: 1024px) {
@@ -387,6 +390,7 @@ html body footer {
 }
 
 html body footer .chats-foot {
+  border-right: 10px solid rgba(128, 128, 128, 0.178);
   display: none;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;

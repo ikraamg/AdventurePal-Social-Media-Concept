@@ -97,6 +97,7 @@ html {
           grid-template-columns: 1.1fr 2fr;
 
           .chatnav {
+            border-right: 10px solid rgba(128, 128, 128, 0.178);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -211,6 +212,8 @@ html {
           grid-template-columns: 100px 1fr 100px;
           grid-template-rows: 1fr;
           margin-bottom: 20px;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+          border-radius: 0;
 
           @media (min-width: 1024px) {
             margin-bottom: 0;
@@ -322,6 +325,7 @@ html {
       }
 
       .chats-foot {
+        border-right: 10px solid rgba(128, 128, 128, 0.178);
         display: none;
         justify-content: space-between;
         align-items: center;

@@ -400,6 +400,7 @@ html body main .menu-main .list .far {
 }
 
 html body main .chats-main {
+  border-radius: 10px;
   width: 100%;
 }
 
@@ -424,6 +425,8 @@ html body main .chats-main .messages {
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
   margin-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+  border-radius: 0;
 }
 
 @media (min-width: 1024px) {
@@ -478,6 +481,7 @@ html body footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: foot;
+  border-radius: 10px;
 }
 
 @media (min-width: 1024px) {
