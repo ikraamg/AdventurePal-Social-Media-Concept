@@ -66,8 +66,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- The original design is attributed to [Vlad Ermakov](https://dribbble.com/ermalength). Link to the [original design](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
-- The design is licenced under the [creative commons 4.0 licence](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- The original design is attributed to [Vlad Ermakov](https://dribbble.com/ermalength), [original design](https://www.behance.net/gallery/70285515/Swipex-This-application-for-dating)
+- The original design is licenced under the [creative commons 4.0 licence](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## 📝 License
 
