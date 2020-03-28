@@ -12,11 +12,11 @@ This project was built from a wireframe and a few design images to create a full
 
 - Three pages were designed, each in mobile and then a desktop version:
 
-1. The person detail [index page](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/38345fa5ff2f31b8fe10eec84001f4c847bad4bc/index.html) that links to the chat page via the messages icon on the left. Or the picture of the message at the bottom right.
+1. The person detail [index page](https://ikraamg.github.io/AdventurePal-Social-Media-Concept/index.html) that links to the chat page via the messages icon on the left. Or the picture of the message at the bottom right.
 
-2. The [chat page](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/38345fa5ff2f31b8fe10eec84001f4c847bad4bc/chats.html), with a list of chats that link to the chat detail page by clicking any chat.
+2. The [chat page](https://ikraamg.github.io/AdventurePal-Social-Media-Concept/chats.html), with a list of chats that link to the chat detail page by clicking any chat.
 
-3. The [messages page](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/38345fa5ff2f31b8fe10eec84001f4c847bad4bc/messages.html) which can be returned from by clicking the left/back arrow on the top left.
+3. The [messages page](https://ikraamg.github.io/AdventurePal-Social-Media-Concept//messages.html) which can be returned from by clicking the left/back arrow on the top left.
 
 - A media query breakpoint was used at 1024px, as requested by the project plan.
 - The responsiveness was checked that it did not break on very small or large screens.
@@ -30,7 +30,7 @@ This project was built from a wireframe and a few design images to create a full
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/ikraamg/HTML-SCSS-Capstone-Project/38345fa5ff2f31b8fe10eec84001f4c847bad4bc/index.html)
+[Live Demo Link](https://ikraamg.github.io/AdventurePal-Social-Media-Concept/index.html)
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ A browser (preferably Chrome)
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ikraamg/<REPO_NAME>/issues)
+Feel free to check the [issues page](https://github.com/ikraamg/AdventurePal-Social-Media-Concept/issues)
 
 Start by:
 
