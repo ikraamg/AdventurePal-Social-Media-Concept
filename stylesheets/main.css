@@ -572,7 +572,7 @@ html body main .details-main .pro-ad {
   padding-top: 5px;
 }
 
-html body main .details-main .pro-ad .ad-top {
+html body main .details-main .pro-ad .js {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
