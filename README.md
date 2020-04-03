@@ -2,6 +2,8 @@
 
 # AdventurePal - HTML Capstone Project
 
+*(This project was built within a period of 3 days)*
+
 > A social media concept for matching people who enjoy outside adventures together
 
 [Video of Presentation](https://www.loom.com/share/f2a13e1ed09a4470852bf6f3edbeac7b)
